@@ -28,6 +28,7 @@ const config = {
   alias: {
     '@/components': path.resolve(__dirname, '..', 'src/components'),
     '@/assets': path.resolve(__dirname, '..', 'src/assets'),
+    '@/types': path.resolve(__dirname, '..', 'src/types'),
   },
   mini: {
     webpackChain(chain) {
