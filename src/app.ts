@@ -5,6 +5,7 @@ import { Button, Cell, Icon } from '@nutui/nutui-taro'
 import '@nutui/nutui-taro/dist/styles/themes/default.scss'
 import 'windi.css'
 import './app.scss'
+import './assets/font/iconfont.css'
 import locale from './locales'
 
 const App = createApp({
