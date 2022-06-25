@@ -1,9 +1,7 @@
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
-// import NutUI from '@nutui/nutui-taro'
-// import '@nutui/nutui-taro/dist/style.css'
 import { Button, Cell, Icon } from '@nutui/nutui-taro'
-import '@nutui/nutui-taro/dist/styles/themes/default.scss';
+import '@nutui/nutui-taro/dist/styles/themes/default.scss'
 import './app.scss'
 
 const App = createApp({
