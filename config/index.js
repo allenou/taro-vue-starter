@@ -11,7 +11,11 @@ const config = {
   },
   sourceRoot: 'src',
   outputRoot: 'dist',
-  plugins: ['@tarojs/plugin-html', 'taro-plugin-pinia'],
+  plugins: [
+    '@tarojs/plugin-html',
+    'taro-plugin-pinia',
+    ['@dcasia/mini-program-tailwind-webpack-plugin/dist/taro'],
+  ],
   defineConstants: {},
   copy: {
     patterns: [],
@@ -19,7 +23,7 @@ const config = {
   },
   framework: 'vue3',
   sass: {
-    data: `@import "@nutui/nutui-taro/dist/styles/variables.scss";`,
+    resource: [path.resolve(__dirname, '..', 'src/styles/nut/theme.scss')],
   },
   alias: {
     '@/components': path.resolve(__dirname, '..', 'src/components'),
@@ -46,7 +50,9 @@ const config = {
     postcss: {
       pxtransform: {
         enable: true,
-        config: {},
+        config: {
+          selectorBlackList: ['nut-'],
+        },
       },
       url: {
         enable: true,
@@ -66,6 +72,7 @@ const config = {
   h5: {
     publicPath: '/',
     staticDirectory: 'static',
+    esnextModules: ['nutui-taro'],
     postcss: {
       autoprefixer: {
         enable: true,
