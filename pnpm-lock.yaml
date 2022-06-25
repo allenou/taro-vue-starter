@@ -7,6 +7,7 @@ specifiers:
   '@tarojs/components': 3.4.12
   '@tarojs/mini-runner': 3.4.12
   '@tarojs/plugin-framework-vue3': 3.4.12
+  '@tarojs/plugin-html': ^3.4.12
   '@tarojs/plugin-platform-weapp': ^3.4.12
   '@tarojs/runtime': 3.4.12
   '@tarojs/taro': 3.4.12
@@ -33,6 +34,7 @@ dependencies:
   '@nutui/nutui-taro': registry.npmmirror.com/@nutui/nutui-taro/3.1.22_vue@3.2.37
   '@tarojs/components': registry.npmmirror.com/@tarojs/components/3.4.12
   '@tarojs/plugin-framework-vue3': registry.npmmirror.com/@tarojs/plugin-framework-vue3/3.4.12_vue@3.2.37
+  '@tarojs/plugin-html': registry.npmmirror.com/@tarojs/plugin-html/3.4.12
   '@tarojs/plugin-platform-weapp': registry.npmmirror.com/@tarojs/plugin-platform-weapp/3.4.12
   '@tarojs/runtime': registry.npmmirror.com/@tarojs/runtime/3.4.12
   '@tarojs/taro': registry.npmmirror.com/@tarojs/taro/3.4.12
@@ -2034,6 +2036,12 @@ packages:
       - supports-color
       - webpack-cli
       - webpack-command
+    dev: false
+
+  registry.npmmirror.com/@tarojs/plugin-html/3.4.12:
+    resolution: {integrity: sha512-6g4XqShy7BhGZkrCO4fg/cHFbRfPyJCB4BsTqIb0iX2I+hUa+103DMx2+sO4/7GeXYWHjRh2/6V/AxQSXhiWHA==, registry: https://packages.aliyun.com/60371955c4393f5ed3b7baa8/npm/npm-registry/, tarball: https://registry.npmmirror.com/@tarojs/plugin-html/-/plugin-html-3.4.12.tgz}
+    name: '@tarojs/plugin-html'
+    version: 3.4.12
     dev: false
 
   registry.npmmirror.com/@tarojs/plugin-platform-alipay/3.4.12:
