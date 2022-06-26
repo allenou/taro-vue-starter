@@ -1,7 +1,5 @@
 const path = require('path')
 const AutoImport = require('unplugin-auto-import/webpack')
-// const { VantResolver } = require('unplugin-vue-components/resolvers')
-// const Components = require('unplugin-vue-components/webpack')
 
 const config = {
   projectName: 'app',
@@ -15,7 +13,7 @@ const config = {
   sourceRoot: 'src',
   outputRoot: 'dist',
   plugins: [
-    '@tarojs/plugin-html',
+    ['@tarojs/plugin-html', {}],
     'taro-plugin-pinia',
     [
       '@tarojs/plugin-framework-vue3',
@@ -26,7 +24,7 @@ const config = {
         },
       },
     ],
-    // ['@dcasia/mini-program-tailwind-webpack-plugin/dist/taro'],
+    ['@dcasia/mini-program-tailwind-webpack-plugin/dist/taro'],
   ],
   defineConstants: {},
   copy: {
@@ -49,21 +47,13 @@ const config = {
           imports: ['vue'],
           dts: 'src/auto-imports.d.ts',
           vueTemplate: true,
-          // eslintrc: {
-          //   enabled: true,
-          //   filepath: 'src/.eslintrc-auto-import.json',
-          //   globalsPropValue: true,
-          // },
+          eslintrc: {
+            enabled: true,
+            filepath: 'src/.eslintrc-auto-import.json',
+            globalsPropValue: true,
+          },
         })
       )
-
-      // chain.plugin('unplugin-vue-components').use(
-      //   Components({
-      //     dts: 'src/components.d.ts',
-      //     dirs: ['src/components'],
-      //     resolvers: [VantResolver()],
-      //   })
-      // )
 
       chain.merge({
         module: {
@@ -85,7 +75,7 @@ const config = {
       pxtransform: {
         enable: true,
         config: {
-          selectorBlackList: ['vant-'],
+          selectorBlackList: ['nut-'],
         },
       },
       url: {
@@ -106,7 +96,7 @@ const config = {
   h5: {
     publicPath: '/',
     staticDirectory: 'static',
-    esnextModules: ['vant'],
+    esnextModules: ['nut'],
     postcss: {
       autoprefixer: {
         enable: true,
