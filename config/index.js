@@ -1,4 +1,7 @@
 const path = require('path')
+const AutoImport = require('unplugin-auto-import/webpack')
+// const { VantResolver } = require('unplugin-vue-components/resolvers')
+// const Components = require('unplugin-vue-components/webpack')
 
 const config = {
   projectName: 'app',
@@ -14,7 +17,16 @@ const config = {
   plugins: [
     '@tarojs/plugin-html',
     'taro-plugin-pinia',
-    ['@dcasia/mini-program-tailwind-webpack-plugin/dist/taro'],
+    [
+      '@tarojs/plugin-framework-vue3',
+      {
+        vueLoaderOption: {
+          // 添加 vue-macros 支持
+          reactivityTransform: true, // 开启vue3响应性语法糖
+        },
+      },
+    ],
+    // ['@dcasia/mini-program-tailwind-webpack-plugin/dist/taro'],
   ],
   defineConstants: {},
   copy: {
@@ -32,6 +44,27 @@ const config = {
   },
   mini: {
     webpackChain(chain) {
+      chain.plugin('unplugin-auto-import').use(
+        AutoImport({
+          imports: ['vue'],
+          dts: 'src/auto-imports.d.ts',
+          vueTemplate: true,
+          // eslintrc: {
+          //   enabled: true,
+          //   filepath: 'src/.eslintrc-auto-import.json',
+          //   globalsPropValue: true,
+          // },
+        })
+      )
+
+      // chain.plugin('unplugin-vue-components').use(
+      //   Components({
+      //     dts: 'src/components.d.ts',
+      //     dirs: ['src/components'],
+      //     resolvers: [VantResolver()],
+      //   })
+      // )
+
       chain.merge({
         module: {
           rule: {
@@ -52,7 +85,7 @@ const config = {
       pxtransform: {
         enable: true,
         config: {
-          selectorBlackList: ['nut-'],
+          selectorBlackList: ['vant-'],
         },
       },
       url: {
@@ -73,7 +106,7 @@ const config = {
   h5: {
     publicPath: '/',
     staticDirectory: 'static',
-    esnextModules: ['nutui-taro'],
+    esnextModules: ['vant'],
     postcss: {
       autoprefixer: {
         enable: true,
