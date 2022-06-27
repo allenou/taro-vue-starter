@@ -22,9 +22,7 @@
     "dev:quickapp": "npm run build:quickapp -- --watch",
     "preview:weapp": "NODE_ENV=production taro build --type weapp --watch",
     "preinstall": "npx only-allow pnpm",
-    "prepare": "husky install",
-    "lint": "eslint \"**/*.{ts,tsx,vue}\"",
-    "lint:fix": "eslint src --fix --ext .ts,.tsx,.vue"
+    "prepare": "husky install"
   },
   "browserslist": [
     "last 3 versions",

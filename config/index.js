@@ -45,11 +45,11 @@ const config = {
       chain.plugin('unplugin-auto-import').use(
         AutoImport({
           imports: ['vue'],
-          dts: 'src/auto-imports.d.ts',
+          dts: 'src/types/auto-imports.d.ts',
           vueTemplate: true,
           eslintrc: {
             enabled: true,
-            filepath: 'src/.eslintrc-auto-import.json',
+            filepath: 'src/types/.eslintrc-auto-import.json',
             globalsPropValue: true,
           },
         })

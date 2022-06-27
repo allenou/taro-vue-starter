@@ -1,3 +1,4 @@
 {
-  "*.{ts,tsx,js,vue,scss}": "prettier --config .prettierrc --write"
+  "*.{js,ts,vue,jsx,tsx,scss}": "prettier --config .prettierrc --write",
+  "*.{js,ts,vue,jsx,tsx}": "eslint --fix"
 }
