@@ -1,20 +1,11 @@
 <template>
-  <view class="index"> index </view>
+  <view class="index">
+    <FontIcon name="github" />
+  </view>
 </template>
 
-<script lang="ts">
-export default defineComponent({
-  components: {}
-})
+<script lang="ts" setup>
+// import { FontIcon } from "@/components";
 </script>
 
-<style lang="scss">
-.box {
-  padding: 0 10px;
-}
-
-.title {
-  font-size: 32px;
-  padding: 16px 0;
-}
-</style>
+<style lang="scss"></style>

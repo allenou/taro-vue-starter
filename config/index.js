@@ -54,7 +54,6 @@ const config = {
           }
         })
       )
-
       chain.merge({
         module: {
           rule: {

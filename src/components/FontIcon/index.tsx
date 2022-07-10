@@ -1,13 +1,8 @@
-import { computed } from 'vue'
-import { defineComponent } from 'vue'
+import { Icon } from '@nutui/nutui-taro'
 
 export const FontIcon = defineComponent({
   name: 'FontIcon',
   props: {
-    prefix: {
-      type: String,
-      default: 'iconfont'
-    },
     name: {
       type: String
     },
@@ -17,14 +12,13 @@ export const FontIcon = defineComponent({
     }
   },
   setup(props) {
-    const styles = computed(() => {
-      return {
-        width: props.size,
-        height: props.size
-      }
-    })
     return () => (
-      <view class={[props.prefix, props.name]} style={styles.value}></view>
+      <Icon
+        classPrefix="icon"
+        fontClassName="iconfont"
+        size={props.size}
+        name={props.name}
+      />
     )
   }
 })

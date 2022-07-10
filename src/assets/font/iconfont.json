@@ -1,16 +1,16 @@
 {
-  "id": "1094899",
-  "name": "allen",
+  "id": "3511784",
+  "name": "taro-vue-starter",
   "font_family": "iconfont",
-  "css_prefix_text": "icon",
+  "css_prefix_text": "icon-",
   "description": "",
   "glyphs": [
     {
-      "icon_id": "7617119",
+      "icon_id": "128976",
       "name": "github",
       "font_class": "github",
-      "unicode": "e600",
-      "unicode_decimal": 58880
+      "unicode": "e7ab",
+      "unicode_decimal": 59307
     }
   ]
 }
