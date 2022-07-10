@@ -41,7 +41,6 @@ specifiers:
   taro-plugin-pinia: ^1.0.0
   typescript: ^4.7.4
   unplugin-auto-import: ^0.9.1
-  vant: v4.0.0-alpha.4
   vue: ^3.2.37
   vue-loader: ^17.0.0
 
@@ -60,7 +59,6 @@ dependencies:
   pinia: registry.npmmirror.com/pinia/2.0.14_j6bzmzd4ujpabbp5objtwxyjp4
   taro-plugin-pinia: registry.npmmirror.com/taro-plugin-pinia/1.0.0
   unplugin-auto-import: 0.9.1_webpack@4.46.0
-  vant: 4.0.0-alpha.4_vue@3.2.37
   vue: registry.npmmirror.com/vue/3.2.37
 
 devDependencies:
@@ -1237,10 +1235,6 @@ packages:
       fastq: 1.13.0
     dev: false
 
-  /@popperjs/core/2.11.5:
-    resolution: {integrity: sha512-9X2obfABZuDVLCgPK9aX0a/x4jaOEweTTWE2+9sr0Qqqevj2Uv5XorvusThmc9XGYpS9yI+fhh8RTafBtGposw==}
-    dev: false
-
   /@rollup/pluginutils/4.2.1:
     resolution: {integrity: sha512-iKnFXr7NkdZAIHiIWE+BX5ULi/ucVFYWD6TbAV+rZctiRTY2PL6tsIKhoIOaoskiWAkgu+VsbXgUVDNLHf+InQ==}
     engines: {node: '>= 8.0.0'}
@@ -1382,20 +1376,6 @@ packages:
     dependencies:
       '@types/node': 18.0.0
     dev: true
-
-  /@vant/icons/1.8.0:
-    resolution: {integrity: sha512-sKfEUo2/CkQFuERxvkuF6mGQZDKu3IQdj5rV9Fm0weJXtchDSSQ+zt8qPCNUEhh9Y8shy5PzxbvAfOOkCwlCXg==}
-    dev: false
-
-  /@vant/popperjs/1.2.1:
-    resolution: {integrity: sha512-qzQlrPE4aOsBzfrktDVwzQy/QICCTKifmjrruhY58+Q2fobUYp/T9QINluIafzsD3VJwgP8+HFVLBsyDmy3VZQ==}
-    dependencies:
-      '@popperjs/core': 2.11.5
-    dev: false
-
-  /@vant/use/1.4.1:
-    resolution: {integrity: sha512-YonNN0SuJLEJuqdoMcVAJm2JUZWkHNrW81QzeF6FLyG5HFUGlmTM5Sby7gdS3Z/8UDMlkWRQpJxBWbmVzmUWxQ==}
-    dev: false
 
   /@webassemblyjs/ast/1.9.0:
     resolution: {integrity: sha512-C6wW5L+b7ogSDVqymbkkvuW9kruN//YisMED04xzeBBqjHa2FYnmvOlS6Xj68xWQRgWvI9cIglsjFowH/RJyEA==}
@@ -2095,6 +2075,7 @@ packages:
 
   /core-js-pure/3.23.2:
     resolution: {integrity: sha512-t6u7H4Ff/yZNk+zqTr74UjCcZ3k8ApBryeLLV4rYQd9aF3gqmjjGjjR44ENfeBMH8VVvSynIjAJ0mUuFhzQtrA==}
+    deprecated: core-js-pure@<3.23.3 is no longer maintained and not recommended for usage due to the number of issues. Because of the V8 engine whims, feature detection in old core-js versions could cause a slowdown up to 100x even if nothing is polyfilled. Some versions have web compatibility issues. Please, upgrade your dependencies to the actual version of core-js-pure.
     requiresBuild: true
     dev: true
 
@@ -4630,17 +4611,6 @@ packages:
     hasBin: true
     dev: true
     optional: true
-
-  /vant/4.0.0-alpha.4_vue@3.2.37:
-    resolution: {integrity: sha512-bgZU5aLjTRfU6egt9PX1DM6HTICKs4ca8sRnbzWvLsogudvqa+zmGicq/104c4JH9bnSMc71cWhioxN4jTbaZA==}
-    peerDependencies:
-      vue: ^3.0.0
-    dependencies:
-      '@vant/icons': 1.8.0
-      '@vant/popperjs': 1.2.1
-      '@vant/use': 1.4.1
-      vue: registry.npmmirror.com/vue/3.2.37
-    dev: false
 
   /verror/1.10.0:
     resolution: {integrity: sha512-ZZKSmDAEFOijERBLkmYfJ+vmk3w+7hOLYDNkRCuRuMJGEmqYNCNLyBBFwWKVMhfwaEF3WOd0Zlw86U/WC/+nYw==}

@@ -1,21 +1,11 @@
 <template>
-  <view class="box">
-    <view class="title">按钮类型 {{ a }}</view>
-    <nut-button type="default" @click="add">默认按钮</nut-button>
-  </view>
+  <view class="index"> index </view>
 </template>
 
-<script>
-export default {
-  setup() {
-    const a = ref(0)
-    const add = () => a.value++
-    return {
-      a,
-      add,
-    }
-  },
-}
+<script lang="ts">
+export default defineComponent({
+  components: {}
+})
 </script>
 
 <style lang="scss">

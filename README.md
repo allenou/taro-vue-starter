@@ -1,6 +1,6 @@
 # taro-vue-starter
 
-Taro vue starter template
+Taro vue starter template.
 ## Used
 
 ### Base
@@ -43,5 +43,3 @@ Taro vue starter template
 - [prettier](https://github.com/prettier/prettier)
 - [lint staged](https://github.com/okonet/lint-staged)
 - [commit lint](https://github.com/conventional-changelog/commitlint)
-
-https://segmentfault.com/a/1190000042019014

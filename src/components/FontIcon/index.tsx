@@ -6,23 +6,25 @@ export const FontIcon = defineComponent({
   props: {
     prefix: {
       type: String,
-      default: 'iconfont',
+      default: 'iconfont'
     },
     name: {
-      type: String,
+      type: String
     },
     size: {
       type: Number,
-      default: 30,
-    },
+      default: 30
+    }
   },
   setup(props) {
     const styles = computed(() => {
       return {
         width: props.size,
-        height: props.size,
+        height: props.size
       }
     })
-    return () => <view class={[props.prefix, props.name]} style={styles}></view>
-  },
+    return () => (
+      <view class={[props.prefix, props.name]} style={styles.value}></view>
+    )
+  }
 })

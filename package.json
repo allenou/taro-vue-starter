@@ -46,7 +46,6 @@
     "pinia": "^2.0.14",
     "taro-plugin-pinia": "^1.0.0",
     "unplugin-auto-import": "^0.9.1",
-    "vant": "v4.0.0-alpha.4",
     "vue": "^3.2.37"
   },
   "devDependencies": {

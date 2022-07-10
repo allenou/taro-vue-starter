@@ -1,0 +1,15 @@
+{
+  "extends": [
+    "stylelint-config-standard-scss",
+    "stylelint-config-recommended-scss",
+    "stylelint-config-prettier-scss"
+  ],
+  "plugins": ["stylelint-order"],
+  "rules": {
+    "scss/at-mixin-pattern": null,
+    "selector-class-pattern": null,
+    "scss/at-import-partial-extension": null,
+    "scss/no-global-function-names": null,
+    "selector-type-no-unknown": [true, { "ignoreTypes": ["page"] }]
+  }
+}
