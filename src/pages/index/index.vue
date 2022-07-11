@@ -4,8 +4,6 @@
   </view>
 </template>
 
-<script lang="ts" setup>
-// import { FontIcon } from "@/components";
-</script>
+<script lang="ts" setup></script>
 
 <style lang="scss"></style>

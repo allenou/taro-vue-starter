@@ -1,5 +1,6 @@
-const path = require('path')
-const AutoImport = require('unplugin-auto-import/webpack')
+import path from 'path'
+import AutoImport from 'unplugin-auto-import/webpack'
+import Components from 'unplugin-vue-components/webpack'
 
 const config = {
   projectName: 'app',
@@ -52,6 +53,14 @@ const config = {
             filepath: 'src/types/.eslintrc-auto-import.json',
             globalsPropValue: true
           }
+        })
+      )
+      chain.plugin('unplugin-vue-components').use(
+        Components({
+          dts: 'src/types/components.d.ts',
+          dirs: ['src/components'],
+          deep: true,
+          types: []
         })
       )
       chain.merge({
